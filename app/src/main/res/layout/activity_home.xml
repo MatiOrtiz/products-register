@@ -9,65 +9,90 @@
         android:id="@+id/getAllProductsButton"
         android:layout_width="260dp"
         android:layout_height="61dp"
+        android:layout_marginBottom="84dp"
         android:text="View all products"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="560dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/searchProductButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="40dp"
         android:text="Search"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="432dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/IDProductForSearchInputText"
         android:layout_width="208dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
         android:hint="Search product with ID"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="430dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/searchProductButton"
+        app:layout_constraintHorizontal_bias="0.787"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/priceProductInputText"
-        android:layout_width="133dp"
-        android:layout_height="40dp"
+        android:layout_width="135dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
         android:hint="Price"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="301dp" />
+        app:layout_constraintEnd_toStartOf="@+id/addProductButton"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameProductInputText" />
 
     <TextView
         android:id="@+id/ProductsItinerary"
         android:layout_width="144dp"
         android:layout_height="94dp"
+        android:layout_marginTop="16dp"
         android:text="Products Itinerary"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="62dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addProductButton"
         android:layout_width="133dp"
         android:layout_height="54dp"
+        android:layout_marginTop="316dp"
         android:text="Add "
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="293dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/nameProductInputText"
-        android:layout_width="133dp"
-        android:layout_height="40dp"
+        android:layout_width="136dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="44dp"
         android:hint="Product name"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintEnd_toStartOf="@+id/addProductButton"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/IDProductInputText"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
+        android:layout_width="145dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="24dp"
         android:hint="Product id"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintBottom_toTopOf="@+id/addProductButton"
+        app:layout_constraintEnd_toEndOf="@+id/addProductButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/nameProductInputText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
