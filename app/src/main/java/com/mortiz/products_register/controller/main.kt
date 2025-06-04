@@ -12,7 +12,7 @@ class main {
     private val findProductByIDUseCase = FindProductByID(repository)
     private val getAllProductsUseCase = GetAllProducts(repository)
 
-    private val controller = HomeController(addProductUseCase, findProductByIDUseCase, getAllProductsUseCase)
+    val controller = HomeController(addProductUseCase, findProductByIDUseCase, getAllProductsUseCase)
 
 
 
@@ -45,5 +45,4 @@ class GetAllProducts(private val repository: ProductRepository) {
     fun execute(): List<Product> {
         return repository.getAllProducts()
     }
-
 }
