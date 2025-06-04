@@ -48,8 +48,9 @@ class HomeActivity : Activity() {
             val name = productName.text.toString()
             val id = productID.text.toString().toLongOrNull()
             val price = productPrice.text.toString().toDoubleOrNull()
-            if (name.isNotBlank() && id != null && price != null) {
-                controller.addProduct(id, name, price)
+
+            val isAdded = controller.addProduct(id, name, price)
+            if (isAdded) {
                 Toast.makeText(this, "Product added: $name", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Invalid input", Toast.LENGTH_SHORT).show()
@@ -58,17 +59,13 @@ class HomeActivity : Activity() {
 
         searchProductButton.setOnClickListener {
             val id = productIDForSearch.text.toString().toLongOrNull()
-            if (id != null) {
-                val product = controller.findProductByID(id)
-                showDialog("Product found", product?.toString() ?: "No product with that ID")
-            } else {
-                Toast.makeText(this, "Invalid ID", Toast.LENGTH_SHORT).show()
-            }
+            val product = controller.findProductByID(id)
+            showDialog("Product found", product?.toString() ?: "No product with that ID")
         }
 
         showProductsButton.setOnClickListener {
             val products = controller.getAllProducts()
-            showDialog("All products", products.toString())
+            showDialog("All products", products.joinToString(separator = "\n"))
         }
     }
 
